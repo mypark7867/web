@@ -19,6 +19,7 @@
   }
 </style>
   <body>
+<h2><a href="http://127.0.0.1/index.html">HOME</a></h2>
 <h1><abbr title="PHP는 PHP Hyper Text로 재귀적 약어이다.">PHP</abbr> 연습하기</h1>
 
 <h2>여기 부터  php예제가 시작됩니다.</h2>
@@ -27,11 +28,19 @@ $date=date_create("2013-03-15");
 echo date_format($date,"Y/m/d H:i:s");
 ?><p></p>
 <p><?php echo "My first PHP script!"; ?>
-<p><?php echo '현재 PHP 버전 : ' .phpversion(); ?>
+<p><?php echo '현재 PHP 버전 : ' .phpversion(); ?><p></p>
+<a href="http://127.0.0.1/php_test.php?memo=first">첫번째 이야기</a>
+<a href="http://127.0.0.1/php_test.php?memo=second">두번째 이야기</a><p></p>
+
+<?php
+  if(isset($_GET['memo'])) {
+    echo file_get_contents('memo/'.$_GET['memo']);
+  }else {
+    echo "반가워, 이제부터 PHP를 배우게 된 사연을 들어봐.";
+  }
+ ?>
+
 <!-- <?php phpinfo(); ?> -->
-
-
-
 <h2>여기까지가 php예제입니다.</h2>
   </body>
 </html>
