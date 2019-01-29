@@ -23,12 +23,54 @@
         background: CornflowerBlue;
         padding: 20px;
       }
+      .nightModeButton {
+      background-color: #202020;
+      color: gainsboro;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      }
+      .dayModeButton {
+      background-color: gainsboro;
+      color: #202020;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      }
     </style>
   </head>
   <body>
-
+ 
     <h1>hellow <a href="https://namu.wiki/w/WWW">web!!!</a></h1>
-
+ 
+ 
+ 	<script>
+      var dayFlag = true;
+      if ( dayFlay ) {
+        dayFlay=false;
+        document.write ( '<input type="button" value="주간모드" class="nightModeButton" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color = 'black';
+        ">' );
+      } else if (dayFlay==false) {
+      	dayFlay=true;
+        document.write ( '<p>Your number is ' );
+      }
+    </script>
+ 
+ 
+ 
+ <input type="button" value="야간모드" class="nightModeButton" onclick="
+ 	document.querySelector('body').style.color='gainsboro';
+ 	document.querySelector('body').style.backgroundColor = '#202020';
+ ">
+ <input type="button" value="주간모드" class="nightModeButton" onclick="
+ document.querySelector('body').style.backgroundColor='white';
+ document.querySelector('body').style.color = 'black';
+ ">
+ 
     <ul style="list-style-type:disc;">
     	<li>프론트 엔드
     		<ol>
@@ -42,6 +84,36 @@
       			<li>NODE.js
       			<li>express
     </ul>
-
+ 
+ 
+ <img src="https://source.unsplash.com/user/erondu/200x200">
+ <a href="" ></a>
+ 
+ 
+ 
+ <!-- <<================= 댓글코드 시작 -->
+ <div id="disqus_thread"></div>
+ <script>
+ 
+ /**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+ 
+ var disqus_config = function () {
+ this.page.url = "http://localhost/web1.html";  // Replace PAGE_URL with your page's canonical URL variable
+ this.page.identifier = "mypark7867/web"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+ };
+ 
+ (function() { // DON'T EDIT BELOW THIS LINE
+ var d = document, s = d.createElement('script');
+ s.src = 'https://web-5mr577r0vy.disqus.com/embed.js';
+ s.setAttribute('data-timestamp', +new Date());
+ (d.head || d.body).appendChild(s);
+ })();
+ </script>
+ <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ 
+ <!-- 댓글코드끝 =================>> -->
+ 
   </body>
 </html>
