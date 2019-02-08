@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WEB homepage</title>
+    <style media="screen">
+      h1 {
+        color:LightSkyBlue;
+        decoration:bold;
+      }
+      a {
+        color:GoldenRod;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hellow <a href="https://ko.wikipedia.org/wiki/%EC%9B%B9">web!</a></h1>
+    <input type="button" id='dayNight' value="야간모드" onclick="changeDayNight(this);">
+
+
+    <ul>
+      <h2><li>프런트 엔드</li></h2>
+      <h3><ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JS 라이브러리</li>
+      </ol></h3>
+      <h2><li>백 엔드</li></h2>
+      <h3><ol>
+        <li>NODE.js</li>
+        <li>express</li>
+      </ol></h3>
+    </ul>
+    <input type="button" id='dayNight' value="야간모드" onclick="changeDayNight(this);">
+
+    <script>
+      function changeDayNight(self) {
+        var selectedBody = document.querySelector('body');
+
+        if(self.value === '야간모드') {
+          selectedBody.style.color = 'white';
+          selectedBody.style.backgroundColor = 'black';
+          var i = 0;
+          while (i < dayNight.length) {
+            dayNight[i].value = '주간모드';
+            i = i + 1;
+          }
+        } else {
+          selectedBody.style.color = 'black';
+          selectedBody.style.backgroundColor = 'white';
+          var i = 0;
+          while (i < dayNight.length) {
+            dayNight[i].value = '야간모드';
+            i = i + 1;
+          }
+        }
+      }
+    </script>
+
+  </body>
+</html>
