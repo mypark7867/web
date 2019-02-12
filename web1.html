@@ -7,6 +7,8 @@
       h1 {
         color:#6F8F8F; //DarkSlateGray
         font-weight:bold;
+        display: inline;
+        margin-right: 30%;
       }
       a {
         color:GoldenRod;
@@ -22,8 +24,7 @@
   <body>
 
     <h1>hellow <a href="https://namu.wiki/w/WWW">web!!!</a></h1>
-
-  <input type="button" id="dayNightInput" value="야간모드" onclick="changedMode(this);">
+    <input type="button" id="dayNightInput" value="야간모드" onclick="changedMode(this);">
 
     <ul style="list-style-type:disc;">
     	<h2><li>프론트 엔드</h2>
@@ -46,6 +47,7 @@
   <script type="text/javascript">
     function changedMode(self) {
       var selectedBody = document.querySelector('body');
+      var dayNightInput = document.querySelectorAll('#dayNightInput');
 
       if(self.value==='야간모드') {
         selectedBody.style.color='gainsboro';
