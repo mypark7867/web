@@ -2,65 +2,34 @@
 <html lang="kor" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>WEB homepage 2</title>
-    <style media="screen">
-      h1 {
-        color:LightSkyBlue;
-        decoration:bold;
-        display: inline;
-        margin-right: 50px;
-      }
-      a {
-        color:GoldenRod;
-        text-decoration: none;
-      }
-      #dayNight {
-        margin-left: 30%;
-      }
-    </style>
+    <title>web1-2</title>
+    <link href="web1-2.css" rel="stylesheet">
   </head>
   <body>
-    <h1>hellow <a href="https://ko.wikipedia.org/wiki/%EC%9B%B9">web2!</a></h1>
-    <input type="button" id="dayNight" value="야간모드" onclick="changeDayNight(this);">
+    <script src="web1-2.js" charset="utf-8"></script>
+
+    <h1>Hellow <a href="https://en.wikipedia.org/wiki/Web">Web1-2!</a></h1>
+    <input type="button" id="dayNightInput" value="야간모드" onclick="changeDayNight(this)">
 
     <ul>
-      <h2><li>프론트 엔드</li></h2>
-      <h3><ol>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>JS 라이브러리</li>
-      </ol></h3>
-      <h2><li>백 엔드</li></h2>
-      <h3><ol>
-        <li>NODE.js</li>
-        <li>Express</li>
-      </ol></h3>
+    <h2><li>Front End</h2>
+    <ol><h3><li><a href="https://www.youtube.com/watch?v=tZooW6PritE&index=1&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb">HTML</a></h3>
+    <h3><li><a href="https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B">CSS</a></h3>
+    <h3><li><a href="https://www.youtube.com/watch?v=dPRtcRwKo-Y&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf">JavaScript</a></h3>
+    <ul><h4><li>Object</h4>
+    <ul><h5><li><a href="https://www.youtube.com/watch?v=GIB8O6R3wko&index=31&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf">Loop</a></li></h5>
+    <h5><li><a href="https://www.youtube.com/watch?v=mjzx1qbyPwU&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf&index=32">Property & Method</a></h5></ul>
+    <h4><li><a href="https://www.youtube.com/watch?v=1f7Svm6ivDY&index=34&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf">Include File</a></h4>
+    <h4><li><a href="https://www.youtube.com/watch?v=pJTpl3umvE8&index=35&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf">Library & Framework</a></h4>
+    <h4><li><a href="https://www.youtube.com/watch?v=vwRkFRke7ls&index=18&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf">Refactoring</a></h4>
+    <h4><li><a href="https://www.youtube.com/watch?v=bmdPy3pP-ts&index=38&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf">Long take</a></h4></ul>
+    <h3><li><a href="https://www.youtube.com/watch?v=w077w7FN-pg&list=PLuHgQVnccGMA9-1PvblBehoGg7Pu1lg6q">Ajax</a></h3>
+    <h3><li>JS Library : JQuery</h3></ol>
+    <h2><li>Back End</h2>
+    <ol><h3><li>NODE.js</h3>
+    <h3><li>Express</h3></ol>
     </ul>
-    <h2><ul>
-      <li><a href="https://www.youtube.com/watch?v=mjzx1qbyPwU&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf&index=32">Object Property & Method</a></li>
-      <li><a href="https://www.youtube.com/watch?v=vwRkFRke7ls&index=18&list=PLuHgQVnccGMBB348PWRN0fREzYcYgFybf">Refactoring</a></li>
-    </u><h2>
 
-    <script>
-      var selectedBody = document.querySelector('body');
-      set = {
-        colors : function(color) { selectedBody.style.color = color; },
-        backgroundColors : function(color) { selectedBody.style.backgroundColor = color; },
-        dayNightButton : function(self, buttonName) { self.value = buttonName; }
-      }
-      function changeDayNight(self) {
-        if(self.value === '야간모드') {
-          set.colors('white');
-          set.backgroundColors('black');
-          set.dayNightButton(self, '주간모드');
-        } else {
-          set.colors('black');
-          set.backgroundColors('white');
-          set.dayNightButton(self, '야간모드');
-        }
-      }
-    </script>
-
+    <input type="button" id="dayNightInput" value="야간모드" onclick="changeDayNight(this)">
   </body>
 </html>
