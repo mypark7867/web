@@ -10,6 +10,7 @@
 
     <h1>Hellow <a href="https://en.wikipedia.org/wiki/Web">Web1-2!</a></h1>
     <input type="button" id="dayNightInput" value="야간모드" onclick="changeDayNight(this)">
+    <input type="button" id="dayNightInput" value="야간모드" onclick="changeDayNight(this)">
 
     <ul>
     <h2><li>Front End</h2>
@@ -27,9 +28,25 @@
     <h3><li>JS Library : JQuery</h3></ol>
     <h2><li>Back End</h2>
     <ol><h3><li>NODE.js</h3>
-    <h3><li>Express</h3></ol>
-    </ul>
-
-    <input type="button" id="dayNightInput" value="야간모드" onclick="changeDayNight(this)">
+    <h3><li onclick="
+      fetch('/memo/object.txt').then(function(response) {
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = '<p>' + text;
+          console.log(response);
+          console.log(text);
+        })
+      })
+    ">Express</h3></ol>
+    </ul><p></p>
+    <input type="button" name="" value="fetch" onclick="
+      fetch('/memo/object.txt').then(function(response) {
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = '<br><p>' + text;
+          console.log(response);
+          console.log(text);
+        })
+      })
+    ">
+    <article class=""></article>
   </body>
 </html>
